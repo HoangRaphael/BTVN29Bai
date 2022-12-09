@@ -5,7 +5,7 @@ bool checkYear(int year)
 {
     if (year % 400 == 0) 
         return true; 
-    if (year % 4 == 0 && year % 100 != 0||year<1582) 
+    if (year % 4 == 0 && year % 100 != 0||year>1582) 
     //Năm nhuận bắt đầu tính từ năm 1582 theo lịch Gregorian
         return true;
     return false; 

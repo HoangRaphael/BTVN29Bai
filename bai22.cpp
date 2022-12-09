@@ -2,13 +2,18 @@
 using namespace std;
 
 int main(){
-    int n;
-    float s=0;
-    cout<<"Nhap N: "; cin>>n;
-    for(int i=1;i<=n;i++){
-    s=s+(1/(2*i-1));
-    cout<<s<<endl;
-//    if(s<2.101999){
- //   cout<<"So nguyen duong lon nhat thoa man la: "<<n;
-  }
+int n=1,b=1;
+float s=0,f=0;
+while(s<2.101999)
+{
+s=s+((float)1/(2*n-1));
+n++;
+}
+cout<<"A, So nguyen duong lon nhat thoa man la: "<<n-1<<endl;
+while (f<2000)
+{
+  f=f+exp(b)-1999*log10(b);
+  b++;
+}
+cout<<"B, So nguyen duong lon nhat thoa man la: "<<b-3;
 }
