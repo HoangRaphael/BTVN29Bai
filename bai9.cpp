@@ -3,9 +3,9 @@ using namespace std;
 
 bool checkYear(int year) 
 {
-    if (year % 400 == 0) 
+    if (year % 400 == 0 && year>1582) 
         return true; 
-    if (year % 4 == 0 && year % 100 != 0||year>1582) 
+    if (year % 4 == 0 && year % 100 != 0 && year > 1582) 
     //Năm nhuận bắt đầu tính từ năm 1582 theo lịch Gregorian
         return true;
     return false; 
@@ -24,7 +24,7 @@ int main()
     {
         case 2:
         {
-            cout<<(checkYear(year) ? "29 Ngay":"28 Ngay");
+            cout<<(checkYear(year) ? "Co 29 Ngay":"Co 28 Ngay");
             break;
         }
         case 1 :case 3: case 5: case 7: case 8: case 10: case 12:

@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int isSNT(int n){
+bool isSNT(int n){
     if (n < 2) {
         return false;
     }
